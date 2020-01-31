@@ -135,9 +135,10 @@ func (p *Presentation) RenderPresentation() error {
 
 func (p *Presentation) DisplayPresentation() error {
 	logger.Info("displaying slides")
+	return p.display(0)
+}
 
-	startingPoint := 0
-rewind:
+func (p *Presentation) display(startingPoint int) error {
 	for k := startingPoint; k < len(p.renderedSlides); k++ {
 		rslide := p.renderedSlides[k]
 		action, err := rslide.DisplayWithOptions(&DisplayOptions{})
@@ -147,15 +148,15 @@ rewind:
 		switch action.(type) {
 		case DisplayActionPrev:
 			if k > 0 {
-				startingPoint = k - 1
+				return p.display(k - 1)
 			}
-			goto rewind
+			if k == 0 {
+				return p.display(0)
+			}
 		case DisplayActionStart:
-			startingPoint = 0
-			goto rewind
+			return p.display(0)
 		case DisplayActionEnd:
-			startingPoint = len(p.renderedSlides) - 1
-			goto rewind
+			return p.display(len(p.renderedSlides) - 1)
 		}
 	}
 	return nil
