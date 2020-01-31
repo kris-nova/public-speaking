@@ -29,16 +29,16 @@ import (
 type DisplayOptions struct {
 }
 
-func (r *RenderedSlide) DisplayWithOptions(opt *DisplayOptions) error {
+func (r RenderedSlide) DisplayWithOptions(opt *DisplayOptions) (DisplayAction, error) {
 	err := termbox.Init()
 	if err != nil {
-		return fmt.Errorf("unable to init termbox: %v", err)
+		return nil, fmt.Errorf("unable to init termbox: %v", err)
 	}
 	defer termbox.Close()
 
 	err = termbox.Clear(termbox.ColorDefault, termbox.ColorDefault)
 	if err != nil {
-		return fmt.Errorf("unable to clear screen: %v", err)
+		return nil, fmt.Errorf("unable to clear screen: %v", err)
 	}
 
 	// Calculate the longest message
@@ -60,7 +60,7 @@ func (r *RenderedSlide) DisplayWithOptions(opt *DisplayOptions) error {
 		case nl:
 			err := r.DisplayAlignedMessage(e, i, highestLen)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 			break
 		case ex:
@@ -72,11 +72,11 @@ func (r *RenderedSlide) DisplayWithOptions(opt *DisplayOptions) error {
 			cmd.Stdin = os.Stdin
 			out, err := cmd.Output()
 			if err != nil {
-				return fmt.Errorf("unable to execute command %s %s: %v", execStr[0], execStr[1:], err)
+				return nil, fmt.Errorf("unable to execute command %s %s: %v", execStr[0], execStr[1:], err)
 			}
 			err = r.DisplayAlignedMessage(e, i, highestLen)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 			outSlc := strings.Split(string(out), "\n")
 			// This is dangerous and could break the program
@@ -89,32 +89,32 @@ func (r *RenderedSlide) DisplayWithOptions(opt *DisplayOptions) error {
 				}
 				err := r.DisplayAlignedMessage(eee, i, highestLen)
 				if err != nil {
-					return fmt.Errorf("failed to display slide: %v", err)
+					return nil, fmt.Errorf("failed to display slide: %v", err)
 				}
 			}
 			break
 		case ll:
 			err := r.DisplayLeftAlignedMessage(e, r.maxx-1)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 			break
 		case rr:
 			err := r.DisplayRightAlignedMessage(e, r.maxx-1)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 			break
 		case tt:
 			err := r.DisplayCenteredMessage(e, -1)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 			break
 		default:
 			err := r.DisplayCenteredMessage(e, i)
 			if err != nil {
-				return fmt.Errorf("failed to display slide: %v", err)
+				return nil, fmt.Errorf("failed to display slide: %v", err)
 			}
 		}
 	}
@@ -123,11 +123,21 @@ func (r *RenderedSlide) DisplayWithOptions(opt *DisplayOptions) error {
 	switch event.Type {
 	case termbox.EventKey:
 		logger.Info("event [%v] (%v)", event.Key, event.Type)
+		switch event.Key {
+		case termbox.KeyArrowLeft:
+			return DisplayActionPrev{}, nil
+		case termbox.KeyArrowRight:
+			return DisplayActionNext{}, nil
+		case termbox.KeyHome:
+			return DisplayActionStart{}, nil
+		case termbox.KeyEnd:
+			return DisplayActionEnd{}, nil
+		}
 		break
 	case termbox.EventNone:
 		break
 	}
-	return nil
+	return DisplayActionNext{}, nil
 }
 
 func (r *RenderedSlide) DisplayAlignedMessage(e Element, lnum, longestMsg int) error {
