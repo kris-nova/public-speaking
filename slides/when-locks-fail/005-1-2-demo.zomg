@@ -8,6 +8,7 @@
 /!
 #### Falco running as a DaemonSet
 /!
+// - Kubeconfig
 // - RBAC admin/default
 // - AWS Meta information
 // - Kubeconfig

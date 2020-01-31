@@ -8,7 +8,7 @@ Main Takeaway: Who are we, and why you should listen to us. Establishing credibi
 
 # Cloud Native Runtime Security with Falco
 /!
-### Kris Nova, Sysdig
+### Kris Nova
 /!
 // Author
 // Maintainer
@@ -16,7 +16,6 @@ Main Takeaway: Who are we, and why you should listen to us. Establishing credibi
 /!
 ### Runtime Security
 /!
-// Anomaly detection
-// Forensics
-// Stability
+// Prevention
+// Detection
 /!
