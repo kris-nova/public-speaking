@@ -4,7 +4,6 @@
 
 # Runtime Security
 /!
-// - Detecting events at runtime
-// - Smart about what we look for
-// - Modular
-// - Compliments prevention tactics
+// - Philosophy that both are critical
+// - Prevention (low hanging fruit)
+// - Detection (everything else)

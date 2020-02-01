@@ -4,14 +4,14 @@
 
 # Kernel Event Tracing
 /!
-//               [Userspace]
+//                   [Userspace]
 //
-//                 [Falco]
-//          [libscap]   [libsinsp]
-//  ---------- { Ring Buffer } ----------
-//  [kernel module]   OR   [eBPF probe]
+//                     [Falco]
+//              [libscap]   [libsinsp]
+//      ---------- { Ring Buffer } ----------
+//      [kernel module]   OR   [eBPF probe]
 //
-//                 [Kernel]
+//                     [Kernel]
 /!
 /!
-#### fosdem.org/2020/schedule/event/security_falco_internals_101
+#### Lorenzo Fontana's talk
