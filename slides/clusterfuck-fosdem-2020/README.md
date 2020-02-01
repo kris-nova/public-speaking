@@ -18,3 +18,8 @@
 
  - [Lorenzo Fontana (Security Internals of Falco)](https://fosdem.org/2020/schedule/event/security_falco_internals_101/)
  - [Andrew Marten (Popping shells in Kubernetes)](https://fosdem.org/2020/schedule/event/containers_k8s_security/)
+ 
+#### Thanks to  Gareth Rushgrove at Snyk 
+
+ - [More info on using OPA policy](https://www.youtube.com/watch?v=cXfsaE6RKfc)
+ 

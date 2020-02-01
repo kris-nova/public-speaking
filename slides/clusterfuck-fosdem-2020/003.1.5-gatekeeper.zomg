@@ -2,10 +2,9 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Prevention
+# Gatekeeper
 /!
-// - Locks
-// - Access control
-// - Policy enforcement
-// - Image and artifact scanning
-// - Code reviews
+// - Kubernetes specific OPA implementation
+// - High barrier to entry
+// - Community needs samples / stories
+// - Cloud native security hub?

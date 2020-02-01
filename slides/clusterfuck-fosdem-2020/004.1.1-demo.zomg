@@ -16,6 +16,10 @@
 // - privleged container (default namespace)
 // - aws meta
 // - kops cluster config
+
+# Demo (Preventing and Detecting)
 // - falco logs with eBPF
+// - gatekeeper (OPA)
+// - Security!
 
 

@@ -2,10 +2,9 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Prevention
+# Open Policy Agent
 /!
-// - Locks
-// - Access control
-// - Policy enforcement
-// - Image and artifact scanning
-// - Code reviews
+// - CNCF Project like Falco
+// - Works with more than Kubernetes
+// - One policy engine to rule them all
+// - Policy engines are everywhere
