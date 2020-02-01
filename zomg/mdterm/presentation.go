@@ -135,10 +135,28 @@ func (p *Presentation) RenderPresentation() error {
 
 func (p *Presentation) DisplayPresentation() error {
 	logger.Info("displaying slides")
-	for _, rslide := range p.renderedSlides {
-		err := rslide.DisplayWithOptions(&DisplayOptions{})
+	return p.display(0)
+}
+
+func (p *Presentation) display(startingPoint int) error {
+	for k := startingPoint; k < len(p.renderedSlides); k++ {
+		rslide := p.renderedSlides[k]
+		action, err := rslide.DisplayWithOptions(&DisplayOptions{})
 		if err != nil {
 			return fmt.Errorf("unable to render slide %s: %v", rslide.slide.name, err)
+		}
+		switch action.(type) {
+		case DisplayActionPrev:
+			if k > 0 {
+				return p.display(k - 1)
+			}
+			if k == 0 {
+				return p.display(0)
+			}
+		case DisplayActionStart:
+			return p.display(0)
+		case DisplayActionEnd:
+			return p.display(len(p.renderedSlides) - 1)
 		}
 	}
 	return nil
