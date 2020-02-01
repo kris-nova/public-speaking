@@ -7,7 +7,7 @@
 //                           Input               Output
 //
 //         (Syscall events) -->  +--------------+  -->  (gRPC)   -->  (application)
-//      (Container context) -->  + Falco Engine |  --> (webhok)  -->  (application)
+//      (Container context) -->  | Falco Engine |  --> (webhook) -->  (application)
 //  (Kubernetes meta/audit) -->  +--------------+  --> (stdout)  -->     (logs)
 //                                     |   ^
 //                                     v   |
