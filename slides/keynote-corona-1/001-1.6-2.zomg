@@ -9,7 +9,7 @@
 //
 //                  [Application]
 //                     [ptrace]
-//      ---------- { system calls } ----------
+//      ---------- { system calls } ----------      .
 //
 //                     [Kernel]
 /!

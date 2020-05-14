@@ -10,7 +10,7 @@
 //                     [Falco]
 //              [libscap]   [libsinsp]
 //                                        (BPF)
-//      ---------- { Ring Buffer } ----------
+//      ---------- { Ring Buffer } ----------       .
 //                 [kernel module]
 //
 //                     [Kernel]
