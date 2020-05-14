@@ -1,0 +1,16 @@
+# Common approaches to system tracing
+/!
+// - LD_PRELOAD
+//   - Dependency on glibc
+//   - Fundamentally changes your app, in possibly unknown ways
+//
+// - Sidecars
+//   - Running with shared storage and shared network
+//   - Constrained to the environment of the original pod
+//   - Must be deployed, and managed for every application
+//
+// - Kernel Modules
+//   - Getting close to total system visibility
+//   - Could potentially crash a kernel
+//   - Just like LD_PRELOAD but requires even more invasive 3rd party code
+/!

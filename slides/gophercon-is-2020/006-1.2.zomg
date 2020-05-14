@@ -1,0 +1,14 @@
+# The gRPC interface
+/!
+// - Started with output mechanisms
+// - Created client-go
+// - Created examples
+# 7 days later (0.17)
+/!
+// - Falco exporter
+// - Falco sidekick
+// - 1k+ members to slack
+// - 100+ members to mailing list
+// - 5X people on calls
+/!
+github.com/falcosecurity/client-go
