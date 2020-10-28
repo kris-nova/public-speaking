@@ -1,0 +1,8 @@
+# Security
+/!
+### Isolation
+/!
+// Multi tenancy introduces concerns
+// Isolating workloads can be challenging
+// The goal is to connect applications
+/!

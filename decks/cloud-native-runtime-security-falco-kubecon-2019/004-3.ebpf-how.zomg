@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------
+Nova/Abhinav
+
+
+Main takeaway: Start a new section on eBPF
+------------------------------------------------------------------------------------------------------------------------
+
+# How eBPF works
+
+### The code is already written
+/!
+// - Existing code in the kernel
+// - Runs as virtual machine
+// - Dynamic maps accessible in userspace
+// - Dynamically load program via bpf() system call
+// - Many features other than tracing
+/!
+### Read more
+// sysdig.com/blog/the-art-of-writing-ebpf-programs-a-primer
+// sysdig.com/resources/papers/linux-observability-with-bpf/

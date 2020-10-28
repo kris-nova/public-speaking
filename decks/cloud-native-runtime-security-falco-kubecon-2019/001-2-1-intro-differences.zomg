@@ -1,0 +1,24 @@
+------------------------------------------------------------------------------------------------------------------------
+Nova
+
+
+Explain the differences in the tooling
+------------------------------------------------------------------------------------------------------------------------
+
+# Sysdig (the company)
+/!
+// - Built on kernel tracing
+// - Evolution of wireshark and tcpdump
+// - Comitted to open source
+/!
+# sysdig (the CLI tool)
+/!
+// - Kernel tracing
+// - Ring buffer
+// - Userland
+/!
+# Falco (the CNCF project)
+/!
+// - Kernel events (libscap, libsinsp)
+// - Container context
+// - Kubernetes context and audit logs

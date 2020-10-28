@@ -1,0 +1,14 @@
+# History 101
+/!
+### Kubernetes on AWS
+/!
+// kube-up.sh
+// kops
+// kubeadm
+// kubicorn
+/!
+### We noticed we had AWS specific concerns
+/!
+// Autoscale Groups (ASGs)
+// Containers on EC2 instances
+/!

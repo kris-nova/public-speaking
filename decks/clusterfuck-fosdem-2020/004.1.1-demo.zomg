@@ -1,0 +1,25 @@
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+# Demo (Kernel tracing)
+/!
+// - /usr/local/bin/fosdem (local, kernel module)
+// - /usr/local/bin/fosdem (local, bpf)
+// - /usr/local/bin/fosdem (container, bpf)
+// - /usr/local/bin/fosdem (kubernetes, bpf, aws)
+/!
+# Demo (Kubernetes exploit)
+/!
+// - kubeconfig (cluster admin)
+// - kubeconfig (default namespace)
+// - privleged container (default namespace)
+// - aws meta
+// - kops cluster config
+
+# Demo (Preventing and Detecting)
+// - falco logs with eBPF
+// - gatekeeper (OPA)
+// - Security!
+
+

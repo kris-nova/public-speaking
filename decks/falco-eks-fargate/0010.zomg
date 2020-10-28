@@ -1,0 +1,7 @@
+# Summary
+/!
+### Kubernetes
+/!
+// We can build our own Kubernetes, with drawbacks
+// We can use EKS and Fargate to pay for what we use
+/!

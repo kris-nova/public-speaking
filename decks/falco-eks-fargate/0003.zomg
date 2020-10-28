@@ -1,0 +1,13 @@
+# History 201
+/!
+### Implementation
+/!
+// Concept of groups of machines
+//   - kops (InstanceGroups)
+//   - kubicorn (ServerPools)
+/!
+### Problems
+/!
+// Nodes had static dependencies (upgrades, OS, dependencies)
+// Paid for the pool but who knows what you needed
+/!

@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------
+Nova
+
+
+Takeaway is the two main tactics for security
+------------------------------------------------------------------------------------------------------------------------
+
+
+#  Taking security seriously
+/!
+### Prevention
+/!
+// - Effective the majority of the time
+// - SE_LINUX, OPA, etc
+// - There is no perfect lock
+/!
+### Runtime security and forensics
+// - Useful in edge cases
+// - Needed during catastrophe
+// - Last line of defense

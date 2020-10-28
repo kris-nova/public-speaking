@@ -1,0 +1,16 @@
+# EKS and Fargate
+/!
+### Major differences
+/!
+// No visibility into ec2-instances
+// Private subnets
+// Exec
+// Enabled access to ptrace(2)
+/!
+### Scheduling a pod in Kubernetes
+/!
+// Fargate container
+// EC2 instance
+// Kubernetes pod
+// Kubernetes node
+/!

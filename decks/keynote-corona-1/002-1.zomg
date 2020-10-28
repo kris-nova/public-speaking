@@ -1,0 +1,18 @@
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+# The Problem
+/!
+// Serverless isolates
+// Containers isolate
+// Cgroups, namespaces isolate
+/!
+# Ex: Falco Install Story
+/!
+// Requires privilege escalation (CNI and Kube proxy does this too!)
+// Users are constrained by the Kubernetes/Serverless APIs
+// Users want security, in a world of isolation
+//      - This is hard
+/!

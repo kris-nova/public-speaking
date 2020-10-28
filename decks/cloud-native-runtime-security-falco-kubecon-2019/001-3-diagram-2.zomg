@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------------------------------------------------
+Nova
+
+
+Explain the differences in the tooling
+------------------------------------------------------------------------------------------------------------------------
+
+# Falco components
+/!
+//                           Input               Output
+//
+//         (Syscall events) -->  +--------------+  --> (TLS gRPC) => (clients)
+//      (Container context) -->  + Falco Engine |  --> (Webhook)
+//  (Kubernetes meta/audit) -->  +--------------+  --> (stdout / file system)
+//                                     |   ^
+//                                     v   |
+//                                    [Rules]

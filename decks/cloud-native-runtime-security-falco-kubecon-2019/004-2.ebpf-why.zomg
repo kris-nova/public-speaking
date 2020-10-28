@@ -1,0 +1,24 @@
+------------------------------------------------------------------------------------------------------------------------
+Nova/Abhinav
+
+
+Main takeaway: Start a new section on eBPF
+------------------------------------------------------------------------------------------------------------------------
+
+# The Use Case
+
+### What we needed
+/!
+// 1) Trace all kernel events into and out of the kernel
+// 2) Enrich the data with syscall metadata
+// 3) Stability
+// 4) Audit in userspace
+/!
+
+### We tried Kernel modules
+/!
+// - Invasive
+//   - Folks were hesitant to load new kernel modules into production
+// - Risky
+//   - Buggy kernel modules can crash kernels and block kernel processing
+//

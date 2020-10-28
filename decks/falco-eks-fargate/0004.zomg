@@ -1,0 +1,13 @@
+# Kubernetes Scheduling
+/!
+### Nodes
+/!
+// Many pods to a single node
+// Virtual Kubelet
+// Reschedule on new nodes
+/!
+### Two way communications
+/!
+// Exec, Logs, etc requires Node:Master and Master:Node
+// Kubelet API is undocumented
+/!

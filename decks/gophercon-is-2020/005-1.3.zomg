@@ -1,0 +1,10 @@
+# Kernel tracing in C and C++
+/!
+//               [Userspace]
+//
+//                 [Falco]
+//          [libscap]   [libsinsp]
+//  ---------- { Ring Buffer } ----------
+//  [kernel module]   OR   [eBPF probe]
+//
+//                 [Kernel]

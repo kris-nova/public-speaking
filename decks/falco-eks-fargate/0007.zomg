@@ -1,0 +1,14 @@
+# Falco
+/!
+### How Falco Works
+/!
+// Access system calls
+// Assert against rules
+// Alert downstream
+/!
+### Falco needs a driver
+/!
+// Kernel Module
+// eBPF Probe
+// Ptrace(2) <--- ECS Fargate!
+/!

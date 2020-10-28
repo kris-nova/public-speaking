@@ -1,0 +1,13 @@
+# ECS and Fargate
+/!
+### Running arbitrary workloads
+/!
+// Define image
+// Expose network
+// Reschedule policy
+/!
+### What about Kubernetes
+/!
+// Everybody wanted the same thing
+// We just need to translate Kubernetes to Fargate
+/!
