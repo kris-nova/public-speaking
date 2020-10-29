@@ -1,0 +1,15 @@
+# GKE
+/!
+### Constraints
+/!
+// Unable to load kernel modules on host
+// Kubernetes API as installation constraint
+// Monitor all processes on host
+/!
+### Solution
+/!
+// eBPF to emulate device driver
+// tracepoints and probe functions to replace kernel module
+// the rest of the system stays the same
+// *less performant than kernel module*
+/!

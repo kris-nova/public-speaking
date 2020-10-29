@@ -1,0 +1,14 @@
+# Kernel Instrumentation
+/!
+### Rebuilding the state at runtime
+/!
+// System calls and arguments
+// Abstraction on top of Linux
+// Using a device driver (kernel module)
+/!
+### Security Concerns
+/!
+// Loading foreign software into kernel
+// Host access to load driver
+// Privileged access on host
+/!

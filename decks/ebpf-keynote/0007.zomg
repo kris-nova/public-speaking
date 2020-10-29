@@ -1,0 +1,14 @@
+# Caveats with eBPF
+/!
+### Kernel
+/!
+// Probe is compiled against the kernel
+// See demo for concrete example with clang9 vs clang10
+// It's a rare low level new utility
+/!
+### Dynamically loaded from userspace
+/!
+// BPF program (probe.c) is compiled to ELF object
+// Dynamically loaded as a driver at runtime
+// No more device drivers
+/!
