@@ -1,13 +1,18 @@
-# About Me
+# How does Falco work?
 /!
-### Kris Nova
 /!
-// Author
-// Maintainer
-// Hacker
-// Alpinist
+// Rebuild the state of the system at runtime
+// Assert against well-known rules
+// Alert when rules are violated
+// *Kernel Instrumentation*
 /!
-### Problem Space
+### Falco components
 /!
-// How do we instrument the kernel without a kernel module in GKE?
-/!
+//                           Input               Output
+//
+//         (Syscall events) -->  +--------------+  --> (TLS gRPC) => (clients)
+//      (Container context) -->  + Falco Engine |  --> (Webhook)
+//  (Kubernetes meta/audit) -->  +--------------+  --> (stdout / file system)
+//                                     |   ^
+//                                     v   |
+//                                    [Rules]

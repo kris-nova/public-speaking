@@ -1,15 +1,14 @@
-# GKE
+# Caveats with eBPF
 /!
-### Constraints
+### Kernel
 /!
-// Unable to load kernel modules on host
-// Kubernetes API as installation constraint
-// Monitor all processes on host
+// Probe is compiled against the kernel
+// See demo for concrete example with clang9 vs clang10
+// It's a rare low level new utility
 /!
-### Solution
+### Dynamically loaded from userspace
 /!
-// eBPF to emulate device driver
-// tracepoints and probe functions to replace kernel module
-// the rest of the system stays the same
-// *less performant than kernel module*
+// BPF program (probe.c) is compiled to ELF object
+// Dynamically loaded as a driver at runtime
+// No more device drivers
 /!

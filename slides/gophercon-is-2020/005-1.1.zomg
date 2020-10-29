@@ -1,7 +1,0 @@
-
-# What we needed to build
-/!
-// - eBPF probe
-// - kernel module
-// - userspace application (go?)
-/!
