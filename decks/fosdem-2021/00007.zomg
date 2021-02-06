@@ -1,0 +1,19 @@
+------------------------------------------------------------------------------------------------------------------------
+# Testing
+/!
+### Unit Testing
+/!
+// Exercise client/server contract
+// Auth
+// Testing Suite
+// Probably just want integration style testing
+/!
+### Go Tests
+/!
+// TestMain()
+// TestHappy()
+// TestSad()
+// Persistent Storage
+// Replicate from Repository
+// Writing a bash interpreter!
+/!

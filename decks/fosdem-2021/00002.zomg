@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------------------------------------------------
+# Scope
+## What are we doing here?
+/!
+### Cloud Photo Storage
+/!
+// Accessible while climbing
+// Reliable / Secure
+// Metrics on photos (key:value)
+/!
+### With a Client
+/!
+// Go
+// Programatic API Access
+// High resolution (large) photographs
+// Schedule (Kubernetes)
+/!

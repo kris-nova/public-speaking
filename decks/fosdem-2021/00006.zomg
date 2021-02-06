@@ -1,0 +1,16 @@
+------------------------------------------------------------------------------------------------------------------------
+# Maybe some other problems...
+/!
+### API
+/!
+// Returns HTML
+// Structs are very large
+// A lot of methods that don't make sense
+/!
+### Security
+/!
+// Plaintext password
+// Username/Password Auth
+// Exported structs in Go Client V1
+// That container Though... 
+/!
